@@ -40,6 +40,7 @@ function App() {
       <Navbar title="TextUtils" abouttext="About Us" mode={mode} toggleMode={toggleMode} />
       <Alert Alert={alert} />
       
+      
 
       <Routes>
         <Route path="/textform" element={<Textform heading="Enter your text here" mode={mode}/>} />
