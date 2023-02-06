@@ -1,12 +1,29 @@
 import React from 'react'
 
-export default function About() {
-  return (
-    <div>
-      <p class="user-select-all">This paragraph will be entirely selected when clicked by the user.</p>
-      <p class="user-select-auto">This paragraph has default select behavior.</p>
-      <p class="user-select-none">This paragraph will not be selectable when clicked by the user.</p>
+export default function About(props) {
+  let mystyle = {
+    color: props.mode === 'dark' ? 'white' : 'black',
+    
+   
+  }
+  let border = {
+    border: '2px solid',
+    borderColor: props.mode === 'dark' ? 'white' : 'black',
+    borderRadius:'15px',
+   
 
-    </div>
+  }
+  return (
+    <>
+     <h1 style={mystyle}>About Us</h1>
+      <div className="container "style={border}>
+        <div className="my-3" style={mystyle} >
+          <p className="user-select-all">This paragraph will be entirely selected when clicked by the user.</p>
+          <p className="user-select-auto">This paragraph has default select behavior.</p>
+          <p classNAme="user-select-none">This paragraph will not be selectable when clicked by the user.</p>
+
+        </div>
+      </div>
+    </>
   )
 }
